@@ -2,4 +2,4 @@
 Um repositorio para realizar testes pessoais.
 
 ## Testes
-<a href="WonderBuyIndex/WonderBuy.md"> WonderBuy</a>
+<a href="WonderBuy/WonderBuy.md"> WonderBuy</a>
