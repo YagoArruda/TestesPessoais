@@ -1,0 +1,67 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .hd-l{
+    height: 100px;
+    vertical-align: middle;
+    box-sizing: border-box;
+  }
+  
+  .bd-b{
+  border-bottom: 5px solid #f1f42f; 
+  }
+  .bd-t{
+  border-top: 5px solid #f1f42f; 
+  }
+  
+  .bg-ml-yellow{
+    background-color: #fafd68;
+  }
+  .bg-ml-yellow-dark{
+    background-color: #f1f42f;
+  }
+  .bg-wonderblue{
+    background-color:rgb(12, 65, 223); 
+  }
+  
+  .fs-7{
+    font-size: 0.9rem;
+  }
+  .fs-8{
+    font-size: 0.8rem;
+  }
+  .fs-9{
+    font-size: 0.7rem;
+  }
+  .fs-10{
+    font-size: 0.6rem;
+  }
+  .fs-11{
+    font-size: 0.5rem;
+  }
+  .fs-12{
+    font-size: 0.48rem;
+  }
+  .fs-13{
+    font-size: 0.3rem;
+  }
+  
+  
+  .show-md{
+    visibility:hidden;/*h*/
+  }
+  .show-sm{
+    visibility:visible;/*v*/
+  }
+  @media (max-width: 960px)
+  {
+    .show-md{
+    visibility:visible;
+    }
+    .show-sm{
+    visibility:hidden;
+    }
+  }
+  
