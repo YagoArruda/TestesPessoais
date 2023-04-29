@@ -1,7 +1,9 @@
-# TestesPessoais
-Um repositorio para realizar testes pessoais.
+## Resumo
 
-## Testes
-<a href="WonderBuy/WonderBuy.md"> WonderBuy</a>
+Um repositorio para realizar testes pessoais ou postar projetos feitos para trabalhos da universidade.
 
-<a href="CalculadoraIMC/Calc.md"> IMC</a>
+## Projetos
+
+1 - <a href="WonderBuy/WonderBuy.md"> WonderBuy</a>
+
+2 - <a href="CalculadoraIMC/Calc.md"> IMC</a>
