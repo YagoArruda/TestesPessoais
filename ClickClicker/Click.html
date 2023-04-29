@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+    <title>IMCcalc</title>
+    <link href="Click.css" rel="stylesheet" type="text/css" />
+
+    <!--Bootstrap (CSS)-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid bg-tertiary">
+
+        <div class="row text-center bg-success bd-b">
+            <h1 class="my-3">Click Clicker</h1>
+        </div>
+
+        <div class="row border">
+            <div in="imgCookie" class="text-center">
+                <img id="cookie" src="ClickImgs/Cookie.png" style="max-width: 250px;" onclick="apertouOBiscoito()"></img>
+
+                <h1 id="clicks" class="text-center">000</h1>
+            </div>
+        </div>
+        <div class="row text-center">
+
+            <button class="col-5 border mx-5 my-2" onclick="valueInc()">
+                <h3 class="d-inline">Click</h3> <p id="costText" class="d-inline"> 10 pts</p>
+                <p>Make the click give more</p>
+                <p id="valueText">Actual: 1</p>
+            </button>
+
+            <button class="col-5 border mx-5 my-2" onclick="size()">
+                <h3 class="d-inline">Size Random</h3> <p class="d-inline">5 pts</p>
+                <p>If the cookie became smaller you earn less if became higher you earn more</p>
+                <p>Actual: 1.0</p>
+            </button>
+
+            <button class="col-5 border mx-5 my-2" onclick="message()">
+                <h3>Cookie Message</h3>
+                <p>Change the message</p>
+                <p>Actual: 1</p>
+            </button>
+
+            <button class="col-5 border mx-5 my-2" onclick="changeCookie()">
+                <h3>Change Cookie</h3>
+                <p>Change the cookie style</p>
+                <p>Actual: Base</p>
+            </button>
+
+        </div>
+
+        <div class="row text-center bg-success bd-t">
+            <p class="my-3"> Clicker cookie nice game </p>
+        </div>
+
+    </div>
+
+    <!--Java-->
+    <script src="Click.js"></script>
+    <!--FontAwesome-->
+    <script src="https://kit.fontawesome.com/ee6502c5bc.js" crossorigin="anonymous"></script>
+    <!--Bootstrap (Java)-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
