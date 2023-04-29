@@ -1,10 +1,11 @@
-function somenteNumeros(Evento)
+function somenteNumeros(evento)
  {
+    CampoAltura = document.getElementById("altura");
+    console.log(CampoAltura);
+    var codigo = evento.keycode;
 
-    CampoAltura = document.getElementById("Altura");
-    var codigo = Evento.keycode;
-
-    if ((codigo < 48 || codigo > 57)) {
+    if (codigo < 48 || codigo > 57) 
+    {
         return false;
     }
 
@@ -12,39 +13,34 @@ function somenteNumeros(Evento)
 
 }
 
-
-
-function somenteNum(Evento) 
+function somenteNum(evento) 
 {
+    CampoPeso = document.getElementById("peso");
+    var codigo = evento.keycode;
 
-
-    CampoPeso = document.getElementById("Peso");
-    var codigo = Evento.keycode;
-
-    if (codigo < 48 || codigo > 57) {
+    if (codigo < 48 || codigo > 57) 
+    {
         return false;
     }
 
     mascaraPes(CampoPeso)
-
-
 }
 
 function mascaraAlt(elemento) 
 {
     var conteudo = elemento.value;
 
-    if (conteudo.lenght == 1) {
+    if (conteudo.length == 1) {
         var text = conteudo.charAt(0) + "." + conteudo.substring(1);
         elemento.value = text;
     }
 }
 
-mascaraPes(elemento)
+function mascaraPes(elemento)
 {
     var conteudo = elemento.value;
 
-    if (conteudo.lenght == 2) {
+    if (conteudo.length == 2) {
         var text = conteudo.charAt(0) + conteudo.charAt(1) + "." + conteudo.substring(2);
         elemento.value = text;
     }
@@ -53,8 +49,8 @@ mascaraPes(elemento)
 
 function calcularIMC() 
 {
-    var altura = document.getElementById("Altura").value;
-    var peso= document.getElementById("Peso").value;
+    var altura = document.getElementById("altura").value;
+    var peso= document.getElementById("peso").value;
     var imc = (peso / (altura * altura)).toFixed(1);
 
     var linkimg = "";
@@ -84,7 +80,7 @@ function calcularIMC()
         var frase = "pode ser uma carac ou um problema";
         var text = "Abaixo ou igual a 18.5";
     }
-    else if(imc > 24.9 && imc <= 34.9)
+    else if(imc > 29.9 && imc <= 34.9)
     {
         var linkimg = "./img/abaixo.png";
         var resultadoimc = "Abaixo do peso";
