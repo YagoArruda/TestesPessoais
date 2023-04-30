@@ -20,42 +20,51 @@
         </div>
 
         <div class="row border">
-            <div in="imgCookie" class="text-center">
+            <div class="text-center">
                 <img id="cookie" src="ClickImgs/Cookie.png" style="max-width: 250px;" onclick="apertouOBiscoito()"></img>
 
-                <h1 id="clicks" class="text-center">000</h1>
+                <h1 id="clicks" class="text-center">0</h1>
             </div>
         </div>
-        <div class="row text-center">
+        <div class="row text-center justify-content-center">
 
-            <button class="col-5 border mx-5 my-2" onclick="valueInc()">
-                <h3 class="d-inline">Click</h3> <p id="costText" class="d-inline"> 10 pts</p>
+            <button class="col-5 bnt rounded mx-5 my-2" onclick="valueInc()">
+                <h3 class="p-1">Click</h3>
                 <p>Make the click give more</p>
                 <p id="valueText">Actual: 1</p>
+                <h5 id="costText" class="p-1"> 10 pts</h5>
             </button>
 
-            <button class="col-5 border mx-5 my-2" onclick="size()">
-                <h3 class="d-inline">Size Random</h3> <p class="d-inline">5 pts</p>
+            <button class="col-5 bnt rounded mx-5 my-2" onclick="size()">
+                <h3 class="p-1">Size</h3>
                 <p>If the cookie became smaller you earn less if became higher you earn more</p>
-                <p>Actual: 1.0</p>
+                <p id="actualSize">Actual: 1.0</p>
+                <h5 id="sizeCost" class="p-1">15 pts</h5>
             </button>
 
-            <button class="col-5 border mx-5 my-2" onclick="message()">
-                <h3>Cookie Message</h3>
-                <p>Change the message</p>
-                <p>Actual: 1</p>
+            <button class="col-5 bnt rounded mx-5 my-2" onclick="hint()">
+                <h3 class="p-1">Hint</h3>
+                <p>Turn on/off hints</p>
+                <p>Actual: off</p>
+                <h5 id="hintPts" class="p-1">5 pts</h5>
             </button>
 
-            <button class="col-5 border mx-5 my-2" onclick="colorCookie()">
-                <h3>Change Cookie</h3>
-                <p>Change the cookie style</p>
-                <p>Actual: Base</p>
+            <button class="col-5 bnt rounded mx-5 my-2" onclick="colorCookie()">
+                <h3 class="p-1">Style</h3>
+                <p>Change the clicker style</p>
+                <p id="clickName">Actual: Normal</p>
+                <h5 id="costImg" class="p-1"> 20 pts</h5>
             </button>
+
+            <div class="col-10 rounded">
+                <h3 id="hintTitle"></h3>
+                <p id="hintText"></p>
+            </div>
 
         </div>
 
         <div class="row text-center bg-success bd-t">
-            <p class="my-3"> Clicker cookie nice game </p>
+            <p class="my-3"> Clicker nice game </p>
         </div>
 
     </div>
