@@ -56,3 +56,55 @@ function colorCookie() {
     img.src
     //document.getElementById("cookie").innerHTML = `<img src="${imgText}" style="max-width: 100px;" class="rounded mx-auto d-block">`
 }
+function 
+   
+apertouOBiscoito() {
+    var Biscoito = document.getElementById("cookie");
+
+    clicks += value;
+
+    
+
+    clicks += value;
+
+   
+
+
+    clicks += value;
+
+// Change the image source
+    
+   
+if (imgNum === 0) {
+        
+        B
+
+       
+Biscoito.src = "ClickImgs/Cookie2.png";
+        imgNum = 
+       
+1;
+    } 
+   
+else {
+        
+        B
+
+       
+Biscoito.src = "ClickImgs/Cookie.png";
+        imgNum = 
+       
+0;
+    }
+
+    
+    }
+
+   
+
+    }
+
+
+   
+change()
+}
