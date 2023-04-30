@@ -51,9 +51,8 @@ function size() {
 
 }
 
-var img = "ClickImgs/Cookie.png";
 function colorCookie() {
-    img = document.getElementById("cookie").innerHTML;
+    varimg = document.getElementById("cookie").innerHTML;
     img.src
     //document.getElementById("cookie").innerHTML = `<img src="${imgText}" style="max-width: 100px;" class="rounded mx-auto d-block">`
 }
