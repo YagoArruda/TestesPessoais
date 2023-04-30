@@ -4,6 +4,8 @@ var clicks = 0;
 var valCost = 10;
 var value = 1;
 
+var imgNum = 0;
+
 function apertouOBiscoito() {
     var Biscoito = document.getElementById("cookie");
 
@@ -49,28 +51,9 @@ function size() {
 
 }
 
-function changeCookie() {
-    var imgText = "ClickImgs/CookieGreen.png";
-
-    var num = Math.random() * (3 - 1) + 1;
-
-    if (num <= 0) {
-        //imgText = "ClickImgs/CookieGreen.png"
-        document.getElementById("cookie").innerHTML = `<img id="cookie" src="ClickImgs/CookieGreen.png" style="max-width: 250px;" onclick="apertouOBiscoito()"></img>`
-    }
-    else if (num <= 1) {
-        //imgText = "ClickImgs/CookieGreen.png"
-        document.getElementById("cookie").innerHTML = `<img id="cookie" src="ClickImgs/CookieGreen.png" style="max-width: 250px;" onclick="apertouOBiscoito()"></img>`
-    }
-    else if (num <= 2) {
-        //imgText = "ClickImgs/CookieGreen.png"
-        document.getElementById("cookie").innerHTML = `<img id="cookie" src="ClickImgs/CookieGreen.png" style="max-width: 250px;" onclick="apertouOBiscoito()"></img>`
-    }
-    else {
-        //imgText = "ClickImgs/CookieGreen.png"
-        document.getElementById("cookie").innerHTML = `<img id="cookie" src="ClickImgs/CookieGreen.png" style="max-width: 250px;" onclick="apertouOBiscoito()"></img>`
-    }
-    document.getElementById("cookie").innerHTML = `<img src="${imgText}" style="max-width: 100px;" class="rounded mx-auto d-block">`
-
-    alert(num);
+var img = "ClickImgs/Cookie.png";
+function colorCookie() {
+    img = document.getElementById("cookie").innerHTML;
+    img.src
+    //document.getElementById("cookie").innerHTML = `<img src="${imgText}" style="max-width: 100px;" class="rounded mx-auto d-block">`
 }
