@@ -7,7 +7,7 @@ function somenteNumeros(evento) {
         return false;
     }
 
-    mascaraAlt(CampoAltura)
+    mascaraTele(CampoAltura)
 
 }
 
@@ -22,7 +22,7 @@ function somenteNum(evento) {
     mascaraPes(CampoPeso)
 }
 
-function mascaraAlt(elemento) {
+function mascaraTele(elemento) {
     var conteudo = elemento.value;
 
     if (conteudo.length == 1) {
