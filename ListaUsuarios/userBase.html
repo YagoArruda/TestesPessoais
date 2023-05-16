@@ -1,0 +1,308 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent Car</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer="" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script defer="" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script defer="" src="app.js"></script>
+</head>
+
+<body class="" style="">
+    <nav class="navbar navbar-expand-md bg-primary" data-bs-theme="light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="./img/logo.png" alt="Bootstrap" width="30" height="24">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modal confirmacao delete database -->
+    <div class="modal" id="md_clear" tabindex="-2">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Excluir Database</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Confirma exclusão do banco de dados completo?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancelar</button>
+                    <button id="btn_cleardb" type="button" class="btn btn-danger">Sim</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal cadastro -->
+    <div class="modal fade" id="md_window" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="md_title" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="md_title">Carro</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row mt-2">
+                        <div id="msg_frm" role="alert" class="alert alert-success" style="display: none;">Carro
+                            atualizado com sucesso</div>
+                    </div>
+                    <form id="form-contato">
+                        <div class="row mt-3">
+                            <div class="col-sm-4">
+                                <label for="f_id">Id</label>
+                                <input type="text" class="form-control" id="f_id" placeholder="ID" disabled="">
+                            </div>
+                            <div class="col-sm-8">
+                                <label for="f_drive">Modelo <span class="text-info">*</span></label>
+                                <input type="text" class="form-control" id="f_drive" required=""
+                                    placeholder="Modelo do Veículo: 4x4">
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-sm-12">
+                                <label for="f_marca">Marca <span class="text-info">*</span></label>
+                                <input type="text" class="form-control" id="f_marca" required=""
+                                    placeholder="Marca do Veículo">
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-sm-4">
+                                <label for="f_combustivel">Combustível <span class="text-info">*</span></label>
+                                <select class="form-select" id="f_combustivel" aria-label="Tipo de Combustível">
+                                    <option selected="">Selecione</option>
+                                    <option value="1">Gasolina</option>
+                                    <option value="2">Alcool</option>
+                                    <option value="3">Flex</option>
+                                    <option value="4">Diesel</option>
+                                    <option value="5">Elétrico</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="f_ano">Ano</label>
+                                <input type="text" class="form-control" id="f_ano" placeholder="####">
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="f_cilindros">Cilindros</label>
+                                <input type="text" class="form-control" id="f_cilindros" placeholder="Cilindros">
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-sm-5">
+                                <label for="f_fabricante">Fabricante <span class="text-info">*</span></label>
+                                <input type="text" class="form-control" id="f_fabricante" placeholder="Fabricante">
+                            </div>
+                            <div class="col-sm-7">
+                                <label for="f_transmissao">Transmissão</label>
+                                <select class="form-select" id="f_transmissao" placeholder="Transmissão">
+                                    <option selected="">Selecione</option>
+                                    <option value="1">Manual</option>
+                                    <option value="2">Automático</option>
+                                </select>
+
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-sm-12">
+                                <label id="lbl_foto" for="f_foto" class="btn btn-light btn-sm">Clique aqui para Alterar
+                                    a foto</label>
+                                <input class="form-control d-none" type="file" id="f_foto">
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-sm-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="1" id="f_alugado">
+                                    <label class="form-check-label" for="f_alugado">
+                                        Alugado ?
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button id="btn_cancel" type="button" class="btn btn-secondary"
+                        data-bs-dismiss="modal">Cancelar</button>
+                    <button id="btn_save" type="button" class="btn btn-primary">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row mt-2">
+            <div id="msg_list" role="alert"></div>
+        </div>
+        <div class="d-flex flex-row-reverse">
+            <div class="">
+                <button id="btn_add" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                    data-bs-target="#md_window">
+                    Novo registro
+                </button>
+            </div>
+            <div class="px-2">
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#md_clear">
+                    Limpar DB
+                </button>
+            </div>
+            <div class="px-2">
+                <button id="btn_unfilter" type="button" class="btn btn-secondary">Limpar busca</button>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-md-3 border-top p-1">
+                <input type="text" class="form-control" id="s_fabricante" placeholder="Fabricante do Veículo">
+
+            </div>
+            <div class="col-md-3 border-top p-1">
+                <select class="form-select" id="s_alugado" aria-label="Fabricante do Veículo">
+                    <option value="" selected="">Alugado?</option>
+                    <option value="1">Sim</option>
+                    <option value="0">Não</option>
+                </select>
+            </div>
+            <div class="col-md-3 border-top p-1">
+                <input type="text" class="form-control" id="s_drive" placeholder="Modelo do Veículo: 4x4">
+            </div>
+            <div class="col-md-3 border-top p-1">
+                <input type="text" class="form-control" id="s_marca" placeholder="Marca do Veículo">
+            </div>
+        </div>
+        <div class="row border-top mt-1">
+            <div class="col-sm-12">
+                <table id="tbl_book" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                            <th scope="col">Marca</th>
+                            <th scope="col">Tração</th>
+                            <th scope="col">Fabricante</th>
+                            <th scope="col">Combustível</th>
+                            <th scope="col">Transmissão</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table_body">
+                        <tr onclick="load_car_for_update(1)">
+                            <td scope="row"><img src="./img/mcqueen.jfif" width="50" height="70"></td>
+                            <td class="align-middle">1</td>
+                            <td class="align-middle">Gol</td>
+                            <td class="align-middle">rwd</td>
+                            <td class="align-middle">Volkswagem</td>
+                            <td class="align-middle">Elétrico</td>
+                            <td class="align-middle">Automático</td>
+                            <td class="align-middle"><button title="editar" type="button"
+                                    onclick="load_car_for_update(1)" class="btn btn-outline-secondary btn-sm"><i
+                                        class="bi bi-pencil-square"></i></button>
+                                <button title="remover" type="button" onclick="remove(1)"
+                                    class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr onclick="load_car_for_update(2)">
+                            <td scope="row"><img src="./img/mcqueen.jfif" width="50" height="70"></td>
+                            <td class="align-middle">2</td>
+                            <td class="align-middle">Gol</td>
+                            <td class="align-middle">rwd</td>
+                            <td class="align-middle">Volkswagem</td>
+                            <td class="align-middle">Gasolina</td>
+                            <td class="align-middle">Manual</td>
+                            <td class="align-middle"><button title="editar" type="button"
+                                    onclick="load_car_for_update(2)" class="btn btn-outline-secondary btn-sm"><i
+                                        class="bi bi-pencil-square"></i></button>
+                                <button title="remover" type="button" onclick="remove(2)"
+                                    class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr onclick="load_car_for_update(3)">
+                            <td scope="row"><img src="./img/mcqueen.jfif" width="50" height="70"></td>
+                            <td class="align-middle">3</td>
+                            <td class="align-middle">Pálio</td>
+                            <td class="align-middle">rwd</td>
+                            <td class="align-middle">Fiat</td>
+                            <td class="align-middle">Alcool</td>
+                            <td class="align-middle">Manual</td>
+                            <td class="align-middle"><button title="editar" type="button"
+                                    onclick="load_car_for_update(3)" class="btn btn-outline-secondary btn-sm"><i
+                                        class="bi bi-pencil-square"></i></button>
+                                <button title="remover" type="button" onclick="remove(3)"
+                                    class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr onclick="load_car_for_update(4)">
+                            <td scope="row"><img src="./img/mcqueen.jfif" width="50" height="70"></td>
+                            <td class="align-middle">4</td>
+                            <td class="align-middle">golf iii / gti</td>
+                            <td class="align-middle">fwd</td>
+                            <td class="align-middle">volkswagen</td>
+                            <td class="align-middle">Gasolina</td>
+                            <td class="align-middle">Automático</td>
+                            <td class="align-middle"><button title="editar" type="button"
+                                    onclick="load_car_for_update(4)" class="btn btn-outline-secondary btn-sm"><i
+                                        class="bi bi-pencil-square"></i></button>
+                                <button title="remover" type="button" onclick="remove(4)"
+                                    class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr onclick="load_car_for_update(5)">
+                            <td scope="row"><img src="./img/mcqueen.jfif" width="50" height="70"></td>
+                            <td class="align-middle">5</td>
+                            <td class="align-middle">s10 pickup 2wd</td>
+                            <td class="align-middle">rwd</td>
+                            <td class="align-middle">chevrolet</td>
+                            <td class="align-middle">Gasolina</td>
+                            <td class="align-middle">Automático</td>
+                            <td class="align-middle"><button title="editar" type="button"
+                                    onclick="load_car_for_update(5)" class="btn btn-outline-secondary btn-sm"><i
+                                        class="bi bi-pencil-square"></i></button>
+                                <button title="remover" type="button" onclick="remove(5)"
+                                    class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr onclick="load_car_for_update(6)">
+                            <td scope="row"><img src="./img/mcqueen.jfif" width="50" height="70"></td>
+                            <td class="align-middle">6</td>
+                            <td class="align-middle">camaro</td>
+                            <td class="align-middle">rwd</td>
+                            <td class="align-middle">chevrolet</td>
+                            <td class="align-middle">Gasolina</td>
+                            <td class="align-middle">Automático</td>
+                            <td class="align-middle"><button title="editar" type="button"
+                                    onclick="load_car_for_update(6)" class="btn btn-outline-secondary btn-sm"><i
+                                        class="bi bi-pencil-square"></i></button>
+                                <button title="remover" type="button" onclick="remove(6)"
+                                    class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
