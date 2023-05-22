@@ -78,5 +78,3 @@ function imprimirContatos() {
 
     tela.innerHTML = strHtml;
 }
-
-funtion
