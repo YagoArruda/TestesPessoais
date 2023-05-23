@@ -1,15 +1,7 @@
-.fs-sm {
-    font-size: small;
-}
+/*Importando fonte do google*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
 
-.fs-lg {
-    font-size: large;
-}
-
-.fl-bt {
-    vertical-align: bottom;
-}
-
+/*Cor de fundo do header e da parte de pesquisa*/
 .bg-ligth-grey {
     background: #2c3e50;
 }
@@ -18,6 +10,7 @@
     background: #1d2e3fc0;
 }
 
+/*Usado no footer e no header*/
 .bd-b {
     border-bottom: 5px solid white;
 }
@@ -26,14 +19,78 @@
     border-top: 5px solid white;
 }
 
-.list-style-none{
+/*Remove estilo da lista*/
+.list-style-none {
     list-style: none;
 }
 
+/*Detalhes (Usados na tela de detalhes do produto)*/
+.cardBorder {
+    overflow: hidden;
+    background: #ffffff;
+    color: #21201e;
+    border-radius: 1.2rem;
+    margin: 2rem;
+    box-shadow: 5px 15px 25px #21201e62
+}
 
-/*Filtrando*/
-@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
+.btnAppear {
+    color: #ececec;
+    display: inline-block;
+    text-decoration: none;
+    background-color: #2c3e50;
+    padding: 1.2rem 3rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    font-size: 20px;
+    transition: all 0.2s;
+}
 
+.btnAppear:hover {
+    transform: scale(1.1);
+}
+
+.fs-merri {
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+.bt {
+    border-top: 1px solid #1d2e3fc0;
+}
+
+
+/*Imagem da tela de detalhes do produto*/
+.img-pp {
+    max-height: 300px;
+    margin: 1rem;
+}
+
+@media (max-width: 480px) {
+    .img-pp {
+        max-height: 170px;
+        margin: 1rem;
+    }
+}
+
+/*Mensagem de quando a pesquisa não corresponde a nenhum produto*/
+.notFound{
+    overflow: hidden;
+    background: #ffffff;
+    color: #21201e;
+    text-align: center;
+    width: 640px;
+    height: 400px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.2rem;
+    margin: 2rem;
+}
+
+
+/*CSS do card de produtos*/
 .fstyle-merri {
     font-size: 1.7rem;
     font-family: 'Merriweather Sans', sans-serif;
