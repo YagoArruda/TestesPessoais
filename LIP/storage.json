@@ -1,0 +1,29 @@
+{
+    "logins": 1,
+    "agendados": 2,
+    "users": [
+        {
+            "nome": "yago",
+            "senha": "abc2456",
+            "carros": [
+                {
+                    "placa": "abc-2343",
+                    "cor": "preto",
+                    "categoria": "grande"
+                },
+                {
+                    "placa": "abc-2342",
+                    "cor": "azul",
+                    "categoria": "pequeno"
+                }
+            ]
+        }
+    ],
+    "agendamentos": [
+        {
+            "dia": "segunda",
+            "hora": "17:50",
+            "tipoDeLimpeza": "Completa"
+        }
+    ]
+}

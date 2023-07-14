@@ -13,7 +13,7 @@ function getProduct() {
                         <div class="product-Info">
                             <h4 class="product-title fstyle-merri">${data[i].title}</h4>
                             <p class="product-price fstyle-merri">R$${data[i].price}</p>
-                            <a class="product-btn fstyle-merri align-self-end" href="detalhes.html" onclick="buyNow(${data[i].id})">Buy Now</a>
+                            <a class="product-btn fstyle-merri align-self-end" href="detalhes.html?id=${data[i].id}">Buy Now</a>
                         </div>
                         </div>`;
             }
@@ -73,6 +73,7 @@ function semResposta() {
     document.getElementById("all-products").innerHTML = `
         <div class="notFound">
         <h4 class="fstyle-merri"><i class="fs-1 fa-solid fa-magnifying-glass" style="color: #2c3e50;"></i><span class="fs-1"> Nothing Found</span></h4>
+        <p class="text-end">Please try another search</p>
         </div>`;
 }
 
@@ -96,7 +97,7 @@ function pesquisaPorCategoria(categoria) {
                     <div class="product-Info">
                         <h4 class="product-title fstyle-merri">${data[i].title}</h4>
                         <p class="product-price fstyle-merri">R$${data[i].price}</p>
-                        <a class="product-btn fstyle-merri align-self-end" href="detalhes.html" onclick="buyNow(${data[i].id})">Buy Now</a>
+                        <a class="product-btn fstyle-merri align-self-end" href="detalhes.html?id=${data[i].id}">Buy Now</a>
                     </div>
                     </div>`;
                     }
@@ -123,7 +124,7 @@ function pesquisaPorCategoria(categoria) {
                 <div class="product-Info">
                     <h4 class="product-title fstyle-merri">${data[i].title}</h4>
                     <p class="product-price fstyle-merri">R$${data[i].price}</p>
-                    <a class="product-btn fstyle-merri align-self-end" href="detalhes.html" onclick="buyNow(${data[i].id})">Buy Now</a>
+                    <a class="product-btn fstyle-merri align-self-end" href="detalhes.html?id=${data[i].id}">Buy Now</a>
                 </div>
                 </div>`;
                 }
@@ -151,7 +152,7 @@ function pesquisaPorNome(nome) {
                         <div class="product-Info">
                             <h4 class="product-title fstyle-merri">${data[i].title}</h4>
                             <p class="product-price fstyle-merri">R$${data[i].price}</p>
-                            <a class="product-btn fstyle-merri align-self-end" href="detalhes.html" onclick="buyNow(${data[i].id})">Buy Now</a>
+                            <a class="product-btn fstyle-merri align-self-end" href="detalhes.html?id=${data[i].id}">Buy Now</a>
                         </div>
                         </div>`;
                 }
@@ -166,10 +167,12 @@ function pesquisaPorNome(nome) {
 }
 
 //Mostra o produto na pagina de detalhes do produto
-function showprod() {
-    let dados = lerJSON();
+function detalhes() {
 
-    let url = `https://fakestoreapi.com/products/${dados.id}`;
+    let PageURL = new URLSearchParams(window.location.search);
+    let id = PageURL.get("id");
+
+    let url = `https://fakestoreapi.com/products/${id}`;
 
     fetch(url)
         .then(res => res.json())
@@ -185,7 +188,7 @@ function showprod() {
                         <h3 class="fs-5 mt-3">${data.title}</h3>
                         <p class="fs-1">R$${data.price}</p>
                         <div class="col-12 m-2">
-                        <a class="btnAppear" href="detalhes.html" onclick="">Add to <i class="fa-solid fa-basket-shopping fs-2" style="color: #ffffff;"></i></a>
+                        <a class="btnAppear" href="#">Add to <i class="fa-solid fa-basket-shopping fs-2" style="color: #ffffff;"></i></a>
                             </div>
 
                         </div>
@@ -203,22 +206,9 @@ function showprod() {
                     </div>
 
                 </div>`)
-}
 
-//Le o arquivo JSON
-function lerJSON() {
-    let strJSON = localStorage.getItem("produto");
-    let objJSON;
+    fetch(url)
+        .then(res => res.json())
+        .then(data => document.getElementById("nomeDaPagina").textContent = `Shopalace: ${data.title}`)
 
-    if (strJSON) {
-        objJSON = JSON.parse(strJSON);
-    }
-
-    return objJSON;
-}
-
-//Salva o ID do produto escolhido em um arquivo JSON
-function buyNow(num) {
-    let produto = { id: num };
-    localStorage.setItem("produto", JSON.stringify(produto));
 }
