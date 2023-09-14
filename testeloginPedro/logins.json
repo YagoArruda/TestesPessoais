@@ -1,0 +1,32 @@
+{
+  "logins": [
+    {
+      "username": "Rosana",
+      "password": "123"
+    },
+    {
+      "username": "Leno",
+      "password": "1234"
+    },
+    {
+      "username": "Pricila",
+      "password": "12345"
+    },
+     {
+      "username": "Leo",
+      "password": "123456"
+    },
+     {
+      "username": "Pedro",
+      "password": "1235467"
+     },
+     {
+      "username": "Mauricio",
+      "password": "12345678"
+    },
+     {
+      "username": "Oya",
+      "password": "123546879"
+    }
+  ]
+}

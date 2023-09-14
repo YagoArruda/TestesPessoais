@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShoPalace</title>
+
+    <!--Bootstrap (CSS)-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!--CSS-->
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <!--Logo-->
+    <link rel="shortcut icon" href="Logo.ico" type="image/x-icon">
+
+</head>
+
+<body onload="renewGet()">
+    <!--Header-->
+    <header>
+        <div class="m-0 bd-b container-fluid row bg-ligth-grey justify-content-center text-center p-3">
+            <!--Logo-->
+            <div class="col-6 col-md-4 col-lg-4 text-lg-start text-center">
+                <a href="index.html"><i class="fa-brands fa-opencart fs-2"
+                        style="color: #ffffff;"><span>ShoPalace</span></i></a>
+            </div>
+
+            <!--Pesquisa-->
+            <div class="col-2 col-lg-1 offset-1 offset-md-4 offset-lg-5 mt-1 mt-lg-0 mb-0">
+                <a href="pesquisa.html"><i class="fa-solid fa-magnifying-glass fs-2"
+                    style="color: #ffffff;"><p class="fs-6 mb-0 mt-1" style="color:#ffffff">Search</p></i></a>
+            </div>
+
+            <!--Cesta-->
+            <div class="col-2 col-lg-1 mt-1 mt-lg-0 mb-0">
+                <a href="#"><i class="fa-solid fa-basket-shopping fs-2"
+                    style="color: #ffffff;"><p class="fs-6 mb-0 mt-1" style="color:#ffffff">Cart</p></i></a>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="container-fluid bg-body-secondary justify-content-center text-center justify-items-center">
+
+        <div class="row py-5 justify-content-center">
+
+            <div class="col-9 col-md-11 col-lg-3 bg-body-ligth-grey me-1 text-white py-3 rounded mt-3 mt-lg-0">
+                <h3 class="my-3">Aluno</h3>
+                <p class="fs-5 my-3">Nome: Yago de Arruda Simões,</p>
+                <p class="fs-5 my-3">Curso: Sistemas de Informação PUC Minas Contagem,</p>
+                <p class="fs-5 my-3">Matricula: 801554.</p>
+            </div>
+
+            <div class="col-10 col-md-11 col-lg-8 mt-5 mt-lg-0">
+                <div id="carouselExampleIndicators" class="carousel slide">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="Bannerlogo.png" class="d-block w-100 rounded" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="Bannerlogo.png" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="Bannerlogo.png" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </div>
+
+        </div>
+
+        <!--Produtos-->
+        <div class="row py-5 justify-content-center">
+            <section class="col-10 col-md-12 col-lg-8 products">
+                <h3 class="bg-blue-btn rounded-pill p-1 text-white">For you</h3>
+                <div id="product-line1" class="all-products d-flex justify-items-center">
+
+                </div>
+                <div id="product-line2" class="all-products d-flex justify-items-center">
+
+                </div>
+                <div id="product-line3" class="all-products d-flex justify-items-center">
+
+                </div>
+            </section>
+
+            <div class="col-10 col-md-12 col-lg-3 offset-lg-1">
+                <h3 class="bg-blue-btn rounded-pill p-1 text-white">Popular</h3>
+                <div id="promotions" class="all-products d-flex justify-items-center">
+
+                </div>
+            </div>
+
+            <div class="col-10 col-md-12 col-lg-12 m-40px">
+                <div class="justify-content-center row bg-blue-btn rounded-pill text-white">
+                   <!-- <h3 class="col-12 p-1">Other products</h3>-->
+                    <p class="fs-merri col-6 mb-2 mt-2 align-middle">Didn't find what you want? try search by the category or go to the <a href="pesquisa.html">search page</a></p>
+
+                    <div class="col-2 col-md-3 col-lg-3 mb-2 mt-2">
+                        <select id="c1" class="form-select" aria-label="Default select example" onchange="searchAll2()">
+                            <option value="all" selected>All Categories</option>
+                            <option value="Accessories - Accessories">Accessories</option>
+                            <option value="Accessories - Jewellery">Jewellery</option>
+                            <option value="Accessories - Ties">Ties</option>
+                            <option value="Accessories - Wallets">Wallets</option>
+                            <option value="Accessories - Watches">Watches</option>
+                        </select>
+                    </div>
+    
+                </div>
+                <div id="product-line-lg-1" class="all-products d-flex justify-items-center">
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <div class="m-0 bd-t container-fluid row bg-ligth-grey justify-content-center text-center">
+            <!--Metodos de pagamento-->
+            <div class="col-12 col-md-6 col-lg-4 text-white">
+                <h5>Payment Methods</h5>
+
+                <div class="list-style-none">
+                    <a href="#"><i class="m-2 fa-brands fa-cc-visa fs-3" style="color: #ffffff;"></i></a>
+                    <a href="#"><i class="m-2 fa-brands fa-paypal fs-3" style="color: #ffffff;"></i></a>
+                    <a href="#"><i class="m-2 fa-brands fa-cc-mastercard fs-3" style="color: #ffffff;"></i></a>
+                    <a href="#"><i class="m-2 fa-brands fa-pix fs-3" style="color: #ffffff;"></i></a>
+                    <a href="#"><i class="m-2 fa-brands fa-cc-diners-club fs-3" style="color: #ffffff;"></i></a>
+                </div>
+
+            </div>
+
+            <!--Redes sociais-->
+            <div class="col-12 col-md-6 col-lg-4 text-white">
+                <h5>Lets be social</h5>
+
+                <div class="list-style-none">
+                    <a href="#"><i class="m-2 fa-brands fa-facebook fs-2" style="color: #ffffff;"></i></a>
+                    <a href="#"><i class="m-2 fa-brands fa-instagram fs-2" style="color: #ffffff;"></i></a>
+                    <a href="#"><i class="m-2 fa-brands fa-twitter fs-2" style="color: #ffffff;"></i></a>
+                    <a href="#"><i class="m-2 fa-brands fa-tiktok fs-2" style="color: #ffffff;"></i></a>
+                </div>
+
+            </div>
+
+            <!--Metodos de contato-->
+            <div class="col-12 col-md-6 col-lg-4 text-white">
+                <h5>Contact us</h5>
+
+                <p><i class="m-2 fa-solid fa-phone fs-5" style="color: #ffffff;"></i>1800 4400 22</p>
+            </div>
+
+            <!--Creditos?-->
+            <div class="col-12 col-md-6 col-lg-12 text-center text-white">
+                <p class="my-0">Feito por: Yago de Arruda Simões,</p>
+                <p class="my-0">Curso: Sistemas de Informação PUC Minas Contagem,</p>
+                <p class="my-0">Matricula: 801554.</p>
+            </div>
+        </div>
+
+    </footer>
+
+    <!--FontAwesome-->
+    <script src="https://kit.fontawesome.com/ee6502c5bc.js" crossorigin="anonymous"></script>
+    <!--Bootstrap (Java)-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <!--Script js-->
+    <script src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+</body>
+
+</html>

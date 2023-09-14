@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="error-message">
+    <p></p>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-10">
+      <input type="username" class="form-control" id="username">
+    </div>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="password">
+    </div>
+    <button id="submit" type="submit">logar</button>
+  </div>
+
+  <div>
+    <select name="carros" id="carros">
+      <option value="bmw">BMW 2.4</option>
+      <option value="ford">Ford 2.0</option>
+      <option value="ferrari">Ferrari 3.0</option>
+    </select>
+  </div>
+
+  <div>
+    <nav class="justify-content-center row bg-body-secondary p-4">
+      <form class="col-lg-5 container-fluid">
+        <div class="input-group">
+          <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
+          <input id="search" type="text" class="form-control" onkeyup="Pesquisa()"
+            placeholder="Digite aqui o nome do perfume..." aria-label="pesquisa" aria-describedby="basic-addon1">
+        </div>
+      </form>
+
+      <!-- Filtros -->
+      <div class="col-lg-2 col-md-4 col-sm-12 my-lg-0 my-md-2 my-sm-2 my-2">
+        <select onchange="Pesquisa()" class="form-select" id="genders">
+          <option value="all" selected="">Genders</option>
+          <option value="Men">Men</option>
+          <option value="Women">Women</option>
+          <option value="Unisex">Unisex</option>
+        </select>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-12 my-lg-0 my-md-2 my-sm-2 my-2">
+        <select onchange="Pesquisa()" class="form-select" id="brands">
+          <option value="all" selected="">Brands</option>
+          <option value="Calvin Klein">Calvin Klein</option>
+          <option value="Ed Hardy">Ed Hardy</option>
+          <option value="Hugo Boss">Hugo Boss</option>
+          <option value="Tommy Hilfiger">Tommy Hilfiger</option>
+        </select>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-12 my-lg-0 my-md-2 my-sm-2 my-2">
+        <select onchange="Pesquisa()" class="form-select" id="types">
+          <option value="all" selected="">Types</option>
+          <option value="Perfume and Body Mist">Perfume and Body Mist</option>
+          <option value="Fragrance Gift Set">Fragrance Gift Set</option>
+          <option value="Deodorant">Deodorant</option>
+        </select>
+      </div>
+
+
+      <a href="index.html?g=Women&b=hb&t=pbm">testeParametros</a>
+
+
+      <button type="button" class="col-lg-1 col-md-3 col-sm-3 col-3 btn btn-dark" onclick="Pesquisa()">Procurar</button>
+
+
+    </nav>
+  </div>
+
+  <button id="try">Click here</button>
+  <h1 id="text"></h1>
+  <script src="index.js"></script>
+
+  <div class="row">
+
+    <h3 class="col-12">--LocalStorage--</h3>
+    <form class="col-lg-5 container-fluid">
+      <div class="input-group">
+        <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
+        <input id="nome" type="text" class="form-control"
+          placeholder="Usuario" aria-label="pesquisa" aria-describedby="basic-addon1">
+      </div>
+    </form>
+
+    <form class="col-lg-5 container-fluid">
+      <div class="input-group">
+        <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
+        <input id="senha" type="text" class="form-control"
+          placeholder="Senha" aria-label="pesquisa" aria-describedby="basic-addon1">
+      </div>
+    </form>
+
+    <button type="button" class="col-lg-1 col-md-3 col-sm-3 col-3 btn btn-dark" onclick="save()">Salvar</button>
+    <div id="salvos">
+      <p>oi</p>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

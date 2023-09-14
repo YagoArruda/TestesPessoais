@@ -14,10 +14,9 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
     <!--Logo-->
     <link rel="shortcut icon" href="Logo.ico" type="image/x-icon">
-
 </head>
 
-<body onload="getProduct()">
+<body>
     <!--Header-->
     <header>
         <div class="m-0 bd-b container-fluid row bg-ligth-grey justify-content-center text-center p-3">
@@ -41,10 +40,10 @@
         <div class="container-fluid bg-body-ligth-grey">
             <h3 class="text-white">Filters</h3>
 
-            <div class="row justify-content-center">
+            <div class="row">
 
                 <!--Categoria 1-->
-                <div class="col-6 col-lg-3 mb-3">
+                <div class="col-3 mb-3">
                     <select id="c1" class="form-select" aria-label="Default select example" onchange="pesquisaGeral()">
                         <option value="all" selected>All</option>
                         <option value="electronics">Electronics</option>
@@ -55,7 +54,7 @@
                 </div>
 
                 <!--Categoria 2-->
-                <div class="col-6 col-lg-3 mb-3">
+                <div class="col-3 mb-3">
                     <select id="c2" class="form-select" aria-label="Default select example" onchange="pesquisaGeral()">
                         <option value="all" selected>All</option>
                         <option value="electronics">Electronics</option>
@@ -66,7 +65,7 @@
                 </div>
 
                 <!--Pesquisar nome-->
-                <div class="col-12 col-lg-6 mb-3">
+                <div class="col-6 mb-3">
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"
                                 style="color: #2c3e50;"></i></span>
@@ -83,6 +82,11 @@
         <section class="products container-fluid">
             <h3>Our Products</h3>
             <div id="all-products" class="all-products d-flex justify-items-center">
+
+                <div class="notFound">
+                    <h4 class="fstyle-merri"><i class="fs-1 fa-solid fa-magnifying-glass"
+                            style="color: #2c3e50;"></i><span class="fs-1"> Nothing Found</span></h4>
+                </div>
 
             </div>
         </section>
