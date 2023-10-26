@@ -1,0 +1,241 @@
+.baseColor {
+    /*background-color: #382332; 3e2347*/
+    background-color: #262626;
+}
+
+.bg-sec {
+    background-color: #b4ad9d;
+    /*57294b*/
+}
+
+.mg-capa {
+    max-height: 800px;
+    margin: 1rem;
+}
+
+.mg-disable {
+    visibility: visible;
+}
+
+@media (max-width: 480px) {
+    .mg-capa {
+        max-height: 1600px;
+        margin: 1rem;
+    }
+
+    .mg-disable {
+        visibility: hidden;
+    }
+
+}
+
+.texto-sobre-imagem {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    /*-50 +130*/
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.container {
+    position: relative;
+}
+
+.img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.justify-max {
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+}
+
+.img-Logo {
+    width: auto;
+    max-height: 50px;
+    display: block;
+    margin-top: 10px;
+}
+
+.img-manga {
+    /*width: auto;*/
+    max-width: 150px;
+    min-width: 150px;
+    max-height: 200px;
+    min-height: 200px;
+    display: block;
+    margin-top: 0px;
+}
+
+.img-destaque {
+    max-width: 10%;
+    height: auto;
+    display: block;
+    margin-top: 0px;
+}
+
+.sua-div {
+    width: 1000px;
+    /* Defina a largura desejada para a sua div */
+    height: 400px;
+    /* Defina a altura desejada para a sua div */
+    /*background-size: cover; /* Ajusta a imagem para cobrir todo o espaço da div */
+}
+
+.suaimhg {
+    width: 1500px;
+    /* Defina a largura desejada para a sua div */
+    height: 900px;
+    /* Defina a altura desejada para a sua div */
+    /*background-size: cover; /* Ajusta a imagem para cobrir todo o espaço da div */
+    filter: blur(5px);
+    overflow: hidden;
+}
+
+.mg-img {
+    transform: scale(1);
+    transition: 0.3s;
+    /*
+    max-width: 60%;
+    min-width: 50%;
+    */
+    max-width: 300px;
+    max-height: 350px;
+    /*min-height: 350px;*/
+    
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.mg-img:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+    
+    /*
+    max-width: 60,5%;
+    min-width: 50%;
+    /*
+    max-height: 451px;
+    min-height: 450px;
+    */
+    max-width: 305px;
+    max-height: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+@media (max-width: 480px) {
+
+    .img-Logo {
+        width: auto;
+        max-height: 30px;
+        display: block;
+        margin-top: 15px;
+    }
+
+    .mg-img {
+        transform: scale(1);
+        transition: 0.3s;
+
+        max-width: 150px;
+        max-height: 200px;
+        
+        border-radius: 15px;
+        overflow: hidden;
+    }
+
+    .mg-img:hover {
+        transform: scale(1.1);
+        transition: 0.3s;
+        
+        /*
+        max-width: 60,5%;
+        min-width: 50%;
+        /*
+        max-height: 451px;
+        min-height: 450px;
+        */
+        max-width: 155px;
+        max-height: 250px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+}
+
+.btn-mg-base {
+    /*
+    --bs-btn-font-weight: 600;
+    --bs-btn-color: var(--bs-white);
+    --bs-btn-bg: var(--mg-violet-bg);
+    --bs-btn-border-color: var(--mg-#262626-bg);
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: #{shade-color($bd-violet, 10%)};
+    --bs-btn-hover-border-color: #{shade-color($bd-violet, 10%)};
+    --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+    --bs-btn-active-bg: #{shade-color($bd-violet, 20%)};
+    --bs-btn-active-border-color: #{shade-color($bd-violet, 20%)};
+    */
+    transform: scale(1);
+    color: white;
+    background-color: #262626;
+    border-radius: 100px 0 100px 0;
+    transition: 0.3s;
+    border-color: #262626;
+    box-shadow: none;
+    border: none;
+
+}
+
+.btn-mg-base:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+    background-color: #262626d5;
+    border-radius: 50px;
+    border-color: #262626;
+}
+
+.btn-mg-base:active {
+    background-color: #1d1c1ca9;
+    border-radius: 50px;
+    transition: 0.3s;
+    border-color: #262626;
+}
+
+/**/
+
+.btn-mg-sec {
+    transform: scale(1);
+    color: white;
+    background-color: #b4ad9d;
+    border-radius: 100px 0 100px 0;
+    transition: 0.3s;
+    border-color: #b4ad9d;
+    box-shadow: none;
+    border: none;
+
+}
+
+.btn-mg-sec:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+    background-color: #b4ad9dd5;
+    border-radius: 50px;
+    border-color: #b4ad9d;
+}
+
+.btn-mg-sec:active {
+    background-color: #979590a8;
+    border-radius: 50px;
+    transition: 0.3s;
+    border-color: #b4ad9d;
+}
