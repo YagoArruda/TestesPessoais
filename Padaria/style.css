@@ -1,0 +1,126 @@
+.FundoLaranja {
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, orange, transparent 20%, orangered);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: orange;
+}
+
+.ImagemProduto {
+    width: 250px;
+    height: 250px;
+}
+
+.FundoCinzaClaro {
+    background-color: rgba(0, 0, 0, 0.301);
+}
+
+.CardProduto {
+    border-radius: 20px;
+}
+
+.FundoMarromMedio {
+    background-color: #b38b6d;
+}
+
+.FundoMarromFalhado {
+    background-color: #b38b6d49;
+}
+
+.FundoMarromClaro {
+    background-color: #ffffffff;
+}
+
+.MargemMarromBaixo {
+    border-bottom: 5px solid #b38b6d;
+}
+
+.MargemMarromCima {
+    border-top: 5px solid #b38b6d;
+}
+
+.MargemMarromClaroBaixo {
+    border-bottom: 5px solid #ffffffff;
+}
+
+.FonteDireitosAutorais {
+    font-size: small;
+}
+
+.SombraDestaque {
+    box-shadow: 10px 10px 10px rgba(56, 55, 55, 0.329);
+}
+
+.FonteMarromClaro {
+    color: #ffffffff;
+}
+
+.BotaoCabecalho {
+    border-radius: 5px;
+    color: #ffffffff;
+    background-color: #b38b6d;
+
+    transform: scale(1);
+    transition: 0.3s;
+    border-color: rgba(56, 55, 55, 0.329);
+    box-shadow: none;
+
+    border-style: solid;
+}
+
+.BotaoCabecalho:hover {
+    border-radius: 5px;
+    color: #ffffffff;
+    background-color: #b38b6d;
+
+    transform: scale(1.1);
+    transition: 0.3s;
+    border-color: rgba(56, 55, 55, 0.329);
+    box-shadow: 5px 5px 5px rgba(56, 55, 55, 0.329);
+}
+
+.AumentarComFoco {
+    transform: scale(1);
+    transition: 0.3s;
+}
+
+.AumentarComFoco:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.FocoDestaque {
+    transform: scale(1);
+    transition: 0.3s;
+}
+
+.FocoDestaque:hover {
+    transform: scale(0.99);
+    transition: 0.3s;
+    box-shadow: 5px 5px 5px rgba(56, 55, 55, 0.329);
+}
+
+
+
+.FontePremiacao {
+    font-size: 10rem;
+}
+
+.Premio {
+    border: 5px solid #b38b6d;
+
+    transform: scale(1);
+    transition: 0.3s;
+
+    box-shadow: 5px 5px 5px rgba(56, 55, 55, 0.329);
+}
+
+.Premio:hover {
+    border: 5px solid #b38b6d;
+
+    transform: scale(1.01);
+    transition: 0.3s;
+
+    box-shadow: 7px 7px 7px rgba(49, 49, 49, 0.329);
+}
