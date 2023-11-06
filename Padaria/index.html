@@ -30,6 +30,8 @@
                     data-bs-target="#offcanvasLocalização">Localização</button>
                 <button class="m-3 BotaoCabecalho" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasContato">Contato</button>
+                <button class="m-3 BotaoCabecalho" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop">Login</button>
             </div>
 
         </header>
@@ -46,7 +48,7 @@
                     <i class="mt-2 fa-solid fa-star" style="color: #b38b6d;"></i>
                     <i class="mt-1 fa-solid fa-star" style="color: #b38b6d;"></i>
                 </div>
-                <h5 class="col-12 MargemMarromBaixo">Ganhadora por 3 anos concecutivos do premio de padaria do ano</h5>
+                <h5 class="col-12 MargemMarromBaixo">Ganhadora por 3 anos consecutivos do premio de padaria do ano</h5>
             </div>
         </div>
 
@@ -71,7 +73,8 @@
                 <h4 class="col-lg-3 col-md-6 col-sm-12 col-12 MargemMarromClaroBaixo">Produto em destaque</h4>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6 col-10 m-3 row ms-2 me-2 text-center FundoCinzaClaro CardProduto SombraDestaque FocoDestaque">
+            <div
+                class="col-lg-3 col-md-6 col-sm-6 col-10 m-3 row ms-2 me-2 text-center FundoCinzaClaro CardProduto SombraDestaque FocoDestaque">
                 <h4 class="col-12 FonteMarromClaro">Bolo Espiral</h4>
                 <div class="col-12">
                     <img class="rounded ImagemProduto" src="boloespiral.jpeg" alt="BoloEspiral">
@@ -96,7 +99,8 @@
 
             <div class="col-12 row m-3 d-flex justify-content-center">
 
-                <p class="col-lg-12 col-md-12 col-sm-10 col-12">Ficamos à disposição para atender às suas necessidades e satisfazer seu desejo por
+                <p class="col-lg-12 col-md-12 col-sm-10 col-12">Ficamos à disposição para atender às suas necessidades e
+                    satisfazer seu desejo por
                     pães e doces frescos de qualidade. Esperamos vê-lo em breve na Padaria Joca!</p>
 
                 <div class="col-lg-4 col-md-4 col-sm-4 col-6 d-flex justify-content-between">
@@ -144,8 +148,8 @@
                 <ul>
                     <li class="AumentarComFoco">Refrigerante - R$ 9.00 (2 L)</li>
                     <li class="AumentarComFoco">Suco Natural - R$ 7.00 (Copo 200 Ml)</li>
-                    <li class="AumentarComFoco">Agua com gas - R$ 5.00 (600 Ml)</li>
-                    <li class="AumentarComFoco">Cafe - R$ 3.49 (Xicara)</li>
+                    <li class="AumentarComFoco">Água com gás - R$ 5.00 (600 Ml)</li>
+                    <li class="AumentarComFoco">Café - R$ 3.49 (Xicara)</li>
                     <li class="AumentarComFoco">Achocolatado - R$ 2.49 (Xicara)</li>
                 </ul>
 
@@ -185,21 +189,56 @@
                 <p class="MargemMarromBaixo">Entre em contato</p>
 
                 <ul>
-                    <li><a href="facebook.com/PadariaJoca" class="rounded p-1 AumentarComFoco"><i
-                                class="AumentarComFoco fs-4 fa-brands fa-square-facebook" style="color: #b38b6d;"></i>
+                    <li class="AumentarComFoco"><a href="facebook.com/PadariaJoca" class="rounded p-1"><i
+                                class="fs-4 fa-brands fa-square-facebook" style="color: #b38b6d;"></i>
                             Facebook: facebook.com/PadariaJoca</a></li>
-                    <li><a href="instagram.com/PadariaJoca" class="rounded p-1 AumentarComFoco"><i
-                                class="AumentarComFoco fs-4 fa-brands fa-instagram" style="color: #b38b6d;"></i>
+                    <li class="AumentarComFoco"><a href="instagram.com/PadariaJoca" class="rounded p-1"><i
+                                class="fs-4 fa-brands fa-instagram" style="color: #b38b6d;"></i>
                             Instagram: instagram.com/PadariaJoca</a></li>
-                    <li><a href="www.padariajoca.com" class="rounded p-1 AumentarComFoco"><i
-                                class="AumentarComFoco fs-4 fa-solid fa-link" style="color: #b38b6d;"></i> Site:
+                    <li class="AumentarComFoco"><a href="www.padariajoca.com" class="rounded p-1"><i
+                                class="fs-4 fa-solid fa-link" style="color: #b38b6d;"></i> Site:
                             www.padariajoca.com</a></li>
-                    <li><i class="AumentarComFoco fs-4 fa-brands fa-whatsapp" style="color: #b38b6d;"></i> WhatsApp:
+                    <li class="AumentarComFoco"><i class="fs-4 fa-brands fa-whatsapp" style="color: #b38b6d;"></i> WhatsApp:
                         (31) 9X765-X32X </li>
-                    <li><i class="AumentarComFoco fs-4 fa-solid fa-phone" style="color: #b38b6d;"></i> Telefone: (31)
+                    <li class="AumentarComFoco"><i class="fs-4 fa-solid fa-phone" style="color: #b38b6d;"></i> Telefone: (31)
                         12XX-5XX8</li>
                 </ul>
 
+            </div>
+        </div>
+
+        <!--tela de login-->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header MargemMarromBaixo">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Cadastro / Login</h1>
+                        <button type="button" class="btn-close FocoDestaque-Texto" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h6 class="MargemMarromBaixo FocoDestaque-Texto mt-3">Email</h6>
+                        <input class="form-control" type="email" placeholder="mail123@mail.com" aria-label="Email">
+
+                        <h6 class="MargemMarromBaixo FocoDestaque-Texto mt-4">Senha</h6>
+                        <input class="form-control mb-4" type="password" placeholder="Senha" aria-label="Senha">
+
+                        <div class="d-flex">
+                            <a class="me-1 ms-1" href="#">
+                                <p class="FocoDestaque-Texto">Cadastrar-se</p>
+                            </a>
+                            <a class="me-1 ms-1" href="#">
+                                <p class="FocoDestaque-Texto">Alterar Senha</p>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer MargemMarromCima">
+                        <button type="button" class="btn btn-secondary FocoDestaque"
+                            data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary FocoDestaque">A terminar</button>
+                    </div>
+                </div>
             </div>
         </div>
 

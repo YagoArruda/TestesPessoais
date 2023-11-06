@@ -124,3 +124,15 @@
 
     box-shadow: 7px 7px 7px rgba(49, 49, 49, 0.329);
 }
+
+
+.FocoDestaque-Texto {
+    transform: scale(1);
+    transition: 0.3s;
+}
+
+.FocoDestaque-Texto:hover {
+    transform: scale(0.99);
+    transition: 0.3s;
+    text-shadow: 5px 5px 5px rgba(56, 55, 55, 0.329);
+}
