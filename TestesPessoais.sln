@@ -7,6 +7,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "YT", "YT", "{A0ECB81C-1F17-
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exemplo", "YT\Exemplo\Exemplo.csproj", "{3AFC4F90-AD52-4FE0-8E60-80E134222430}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VS", "VS", "{979CB431-A5D6-4F35-89AA-2AA5324505D0}"
+	ProjectSection(SolutionItems) = preProject
+		tst.cs = tst.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

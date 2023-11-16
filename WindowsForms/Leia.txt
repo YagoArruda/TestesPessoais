@@ -1,0 +1,7 @@
+-- AED Maker Fake ---
+
+A pasta "Códigos" contém exclusivamente os códigos necessários para operacionalizar o aplicativo, excluindo a seção das interfaces, que é gerada automaticamente.
+
+A pasta "Programa" abriga uma versão funcional do projeto.
+
+Por fim, a pasta "Projeto Completo" engloba integralmente o projeto, contendo todos os arquivos criados tanto por mim quanto pelo ambiente de desenvolvimento Visual Studio.

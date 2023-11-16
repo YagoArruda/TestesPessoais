@@ -1,0 +1,11 @@
+C:\Users\Yago\Desktop\Projetos Github\WindowsFormsTeste\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+C:\Users\Yago\Desktop\Projetos Github\WindowsFormsTeste\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\Yago\Desktop\Projetos Github\WindowsFormsTeste\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\Yago\Desktop\Projetos Github\WindowsFormsTeste\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\Yago\Desktop\Projetos Github\WindowsFormsTeste\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Dados.resources
+C:\Users\Yago\Desktop\Projetos Github\WindowsFormsTeste\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\AED_Market_Fake.exe.config
+C:\Users\Yago\Desktop\Projetos Github\WindowsFormsTeste\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\AED_Market_Fake.exe
+C:\Users\Yago\Desktop\Projetos Github\WindowsFormsTeste\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\AED_Market_Fake.pdb
+C:\Users\Yago\Desktop\Projetos Github\WindowsFormsTeste\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\AED_Market_Fake.Properties.Resources.resources
+C:\Users\Yago\Desktop\Projetos Github\WindowsFormsTeste\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\AED_Market_Fake.exe
+C:\Users\Yago\Desktop\Projetos Github\WindowsFormsTeste\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\AED_Market_Fake.pdb

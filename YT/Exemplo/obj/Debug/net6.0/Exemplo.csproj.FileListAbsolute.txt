@@ -3,7 +3,6 @@ C:\Users\Yago\Desktop\Projetos Github\TestesPessoais\YT\Exemplo\bin\Debug\net6.0
 C:\Users\Yago\Desktop\Projetos Github\TestesPessoais\YT\Exemplo\bin\Debug\net6.0\Exemplo.runtimeconfig.json
 C:\Users\Yago\Desktop\Projetos Github\TestesPessoais\YT\Exemplo\bin\Debug\net6.0\Exemplo.dll
 C:\Users\Yago\Desktop\Projetos Github\TestesPessoais\YT\Exemplo\bin\Debug\net6.0\Exemplo.pdb
-C:\Users\Yago\Desktop\Projetos Github\TestesPessoais\YT\Exemplo\obj\Debug\net6.0\Exemplo.csproj.AssemblyReference.cache
 C:\Users\Yago\Desktop\Projetos Github\TestesPessoais\YT\Exemplo\obj\Debug\net6.0\Exemplo.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Yago\Desktop\Projetos Github\TestesPessoais\YT\Exemplo\obj\Debug\net6.0\Exemplo.AssemblyInfoInputs.cache
 C:\Users\Yago\Desktop\Projetos Github\TestesPessoais\YT\Exemplo\obj\Debug\net6.0\Exemplo.AssemblyInfo.cs
